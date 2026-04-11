@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colores de Central Vial: Verde y Plomo */
+  --color-cvial-primary: #009A44;   /* Verde central vial */
+  --color-cvial-secondary: #5C5E60; /* Plomo/Gris oscuro */
+  --color-cvial-accent: #333333;    /* Plomo más oscuro para títulos */
+  --color-cvial-light: #F9FAFB;     /* Fondo gris muy clarito para la web */
+}
