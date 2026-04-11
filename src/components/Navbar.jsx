@@ -4,7 +4,7 @@ import { SiWhatsapp } from '@icons-pack/react-simple-icons';
 
 export default function Navbar() {
   // TODO: Reemplaza este número por el WhatsApp real de contacto
-  const numeroWhatsApp = "56996918119"; 
+  const numeroWhatsApp = "56944301780"; 
   const mensajeWhatsApp = "Hola, vengo desde la página web de Central Vial y me gustaría realizar una consulta.";
   const linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensajeWhatsApp)}`;
 

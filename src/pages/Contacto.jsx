@@ -5,8 +5,8 @@ import { SiWhatsapp } from '@icons-pack/react-simple-icons';
 
 function Contacto() {
   // TODO: Reemplaza este número por el WhatsApp real de contacto de Central Vial
-  const numeroWhatsApp = "56996918119"; 
-  const mensajeWhatsApp = "Hola Paulina, vengo desde la página web de Central Vial y me gustaría cotizar un servicio.";
+  const numeroWhatsApp = "56944301780"; 
+  const mensajeWhatsApp = "Hola, vengo desde la página web de Central Vial y me gustaría cotizar un servicio.";
   const linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensajeWhatsApp)}`;
 
   return (
@@ -41,6 +41,7 @@ function Contacto() {
               <input type="hidden" name="_subject" value="¡Nueva consulta desde la página web de Central Vial!" />
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_next" value="https://hast1o.github.io/CentralVial/#/contacto" />
               
               {/* Fila 1: Nombre y Empresa */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
