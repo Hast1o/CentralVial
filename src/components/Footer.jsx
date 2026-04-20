@@ -52,9 +52,12 @@ export default function Footer() {
                 <Phone className="text-cvial-primary flex-shrink-0" size={20} />
                 <span>+56944301780</span>
               </li>
-              <li className="flex items-center gap-3">
-                <Mail className="text-cvial-primary flex-shrink-0" size={20} />
-                <span>cpalfaro.centralvial@gmail.com</span>
+              <li className="flex items-start gap-3">
+                <Mail className="text-cvial-primary flex-shrink-0 mt-1" size={20} />
+                <div className="flex flex-col">
+                  <span>palfaro.centralvial@gmail.com</span>
+                  <span>psoto.centralvial@gmail.com</span>
+                </div>
               </li>
             </ul>
           </div>
@@ -70,9 +73,10 @@ export default function Footer() {
           </p>
           
           {/* Texto de desarrollo (Opcional, puedes borrarlo si gustas) */}
-          <p className="text-sm text-gray-500 text-center md:text-right">
-            Supervisora Zonal: Paulina Alfaro Jeldres
-          </p>
+          <div className="text-sm text-gray-500 text-center md:text-right flex flex-col">
+            <p>Encargada de ventas: Paulina Alfaro Jeldres</p>
+            <p>Supervisor de terreno: Patricio Ramírez</p>
+          </div>
         </div>
 
       </div>

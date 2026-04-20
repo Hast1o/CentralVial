@@ -140,7 +140,7 @@ function Contacto() {
           <div className="bg-gray-50 p-8 md:p-10 border-t border-gray-200 flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-center md:text-left">
               <h3 className="text-xl font-bold text-cvial-secondary mb-1">¿Prefieres trato directo?</h3>
-              <p className="text-gray-600 text-sm md:text-base">Paulina Alfaro Jeldres | Supervisora Zonal</p>
+              <p className="text-gray-600 text-sm md:text-base">Paulina Alfaro Jeldres | Encargada de ventas</p>
               <div className="flex items-center justify-center md:justify-start gap-2 mt-2 text-gray-700">
                 <MapPin size={18} className="text-cvial-primary" />
                 <span className="text-sm font-medium">Curicó / Molina, Región del Maule</span>
