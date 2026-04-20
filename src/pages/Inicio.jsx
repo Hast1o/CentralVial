@@ -48,7 +48,7 @@ const clientes = [
   { id: 1, nombre: "Const. Independencia", rubro: "Constructora", logo: independencia },
   { id: 2, nombre: "Const. Galilea", rubro: "Constructora", logo: galilea },
   { id: 3, nombre: "Const. Malpo", rubro: "Constructora", logo: malpo },
-  { id: 4, nombre: "Municipalidad Curico", rubro: "Constructora", logo: municurico },
+  { id: 4, nombre: "Municipalidad Curico", rubro: "Municipio", logo: municurico },
   { id: 5, nombre: "Const. Demotrón", rubro: "Constructora", logo: demotron },
   { id: 7, nombre: "Const. Paso Ancho", rubro: "Constructora", logo: pasoancho },
   { id: 10, nombre: "Magotteaux Andino", rubro: "Empresa", logo: magotteaux },
