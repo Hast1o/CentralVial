@@ -21,6 +21,9 @@ import malpo from '../assets/empresas/malpo.png';
 import galilea from '../assets/empresas/galilea.png';
 import independencia from '../assets/empresas/independencia.png';
 import mas from '../assets/empresas/mas.png';
+import microesfera from '../assets/AFIN/Microesferas.png';
+import doscrilrojo from '../assets/AFIN/Doscrilralvarojo.png';
+import pegamento from '../assets/AFIN/Pegamento-epoxico-1.png';
 
 const slides = [
   {
@@ -55,16 +58,18 @@ const clientes = [
   { id: 12, nombre: "Mantenimiento COPEC", rubro: "Servicios", logo: copec },
   { id: 13, nombre: "Obras Viales MOP", rubro: "Sector Público", logo: mop },
   { id: 14, nombre: "y muchas mas", rubro: "varios", logo: mas },
-
 ];
 
-// --- DATOS PRODUCTOS AFIN (5 Ítems) ---
+// --- DATOS PRODUCTOS AFIN (8 Ítems) ---
 const productosAfin = [
   { id: 1, nombre: "Pintura Acrílica Citycril", descripcion: "Base solvente para señalización", imagen: imgafin },
   { id: 2, nombre: "Plástico en Frío Doscril", descripcion: "Dos componentes de alta duración", imagen: imgdoscril },
   { id: 3, nombre: "Pintura Acrílica Señacril", descripcion: "Base solvente de secado rápido", imagen: imgralva },
   { id: 4, nombre: "Twincril Componente A", descripcion: "Señalización vial sistema 1:1", imagen: imgtwinA },
-  { id: 5, nombre: "Twincril Componente B", descripcion: "Catalizador para sistema Twincril", imagen: imgtwinB }
+  { id: 5, nombre: "Twincril Componente B", descripcion: "Catalizador para sistema Twincril", imagen: imgtwinB },
+  { id: 6, nombre: "Pegamento Epóxico", descripcion: "Para fijación de tachas viales", imagen: pegamento },
+  { id: 7, nombre: "Doscril Rojo", descripcion: "Plástico en frío antideslizante", imagen: doscrilrojo },
+  { id: 8, nombre: "Microesferas de Vidrio", descripcion: "Echostar 5 para retroreflectividad", imagen: microesfera }
 ];
 
 export default function Inicio() {
@@ -80,17 +85,17 @@ export default function Inicio() {
 
   return (
     <div className="bg-cvial-light min-h-screen pb-10">
-      
+
       {/* --- SECCIÓN 1: HERO / CARRUSEL --- */}
       <div className="relative w-full h-[60vh] md:h-[75vh] overflow-hidden bg-black">
         {slides.map((slide, index) => (
-          <div 
+          <div
             key={slide.id}
             className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out ${index === currentSlide ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
           >
-            <img 
-              src={slide.imagen} 
-              alt={slide.titulo} 
+            <img
+              src={slide.imagen}
+              alt={slide.titulo}
               className="w-full h-full object-cover opacity-60"
             />
             <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
@@ -100,8 +105,8 @@ export default function Inicio() {
               <p className="text-lg md:text-2xl text-gray-200 max-w-3xl drop-shadow-md">
                 {slide.descripcion}
               </p>
-              <a 
-                href="#/contacto" 
+              <a
+                href="#/contacto"
                 className="mt-8 bg-cvial-primary hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
               >
                 Cotizar Proyecto
@@ -110,13 +115,13 @@ export default function Inicio() {
           </div>
         ))}
 
-        <button 
+        <button
           onClick={prevSlide}
           className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-cvial-primary p-2 md:p-3 rounded-full text-white transition-colors backdrop-blur-sm"
         >
           <ChevronLeft size={30} />
         </button>
-        <button 
+        <button
           onClick={nextSlide}
           className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-cvial-primary p-2 md:p-3 rounded-full text-white transition-colors backdrop-blur-sm"
         >
@@ -125,7 +130,7 @@ export default function Inicio() {
 
         <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-3">
           {slides.map((_, index) => (
-            <button 
+            <button
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide ? 'bg-cvial-primary w-8' : 'bg-white/50 hover:bg-white'}`}
@@ -146,17 +151,16 @@ export default function Inicio() {
           </p>
         </div>
 
-        {/* Grilla actualizada para 13 elementos */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
           {clientes.map((cliente) => (
-            <div 
+            <div
               key={cliente.id}
               className="bg-white rounded-2xl p-4 flex flex-col items-center justify-center border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-default"
             >
               <div className="h-16 md:h-20 w-full flex items-center justify-center mb-3">
-                <img 
-                  src={cliente.logo} 
-                  alt={`Logo ${cliente.nombre}`} 
+                <img
+                  src={cliente.logo}
+                  alt={`Logo ${cliente.nombre}`}
                   className="max-h-full max-w-full object-contain grayscale hover:grayscale-0 transition-all duration-500"
                 />
               </div>
@@ -184,17 +188,20 @@ export default function Inicio() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {productosAfin.map((producto) => (
-            <div 
+            <div
               key={producto.id}
               className="bg-white rounded-2xl p-6 flex flex-col items-center justify-center border-b-4 border-yellow-400 shadow-md hover:shadow-xl hover:border-yellow-500 transition-all duration-300 transform hover:-translate-y-2 cursor-default group"
             >
               <div className="h-32 w-full flex items-center justify-center mb-4 overflow-hidden">
-                <img 
-                  src={producto.imagen} 
-                  alt={producto.nombre} 
-                  className="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-500"
+                <img
+                  src={producto.imagen}
+                  alt={producto.nombre}
+                  className={`object-contain transition-transform duration-500 ${producto.id === 7
+                      ? 'scale-[0.7] group-hover:scale-[0.8]' // Ajustado a 160% base y 175% en hover
+                      : 'max-h-full max-w-full group-hover:scale-110' // Comportamiento normal para el resto
+                    }`}
                 />
               </div>
               <h3 className="font-bold text-gray-800 text-center text-sm md:text-base leading-tight">
