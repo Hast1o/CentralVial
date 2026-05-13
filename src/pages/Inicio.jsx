@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight, X } from 'lucide-react'; // <-- Se agregó e
 import imgaerodromo from '../assets/aerodromo.png';
 import imgvalla from '../assets/valla.png';
 import paso from '../assets/paso_zebra.png';
+import heroVideo from '../assets/hero.mp4';
 import mop from '../assets/empresas/MOP.png';
 import municurico from '../assets/empresas/municipalidad-curico.png';
 import copec from '../assets/empresas/copec.png';
@@ -17,9 +18,6 @@ import independencia from '../assets/empresas/independencia.png';
 import mas from '../assets/empresas/mas.png';
 import dgacLogo from '../assets/empresas/DGAC.png'; 
 
-// Importa aquí las fotos de los trabajos realizados (EJEMPLOS)
-// import trabajoMOP from '../assets/trabajos/trabajo_mop.jpg';
-// import trabajoCurico from '../assets/trabajos/trabajo_curico.jpg';
 
 const slides = [
   {
@@ -69,7 +67,7 @@ export default function Inicio() {
   useEffect(() => {
     const timer = setInterval(nextSlide, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [currentSlide]);
 
   // --- FUNCIONES PARA BLOQUEAR EL SCROLL CUANDO EL MODAL ESTÁ ABIERTO ---
   useEffect(() => {
@@ -88,47 +86,48 @@ export default function Inicio() {
 
       {/* --- SECCIÓN 1: HERO / CARRUSEL --- */}
       <div className="relative w-full h-[60vh] md:h-[75vh] overflow-hidden bg-black">
-        {slides.map((slide, index) => (
-          <div
-            key={slide.id}
-            className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out ${index === currentSlide ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
-          >
-            <img
-              src={slide.imagen}
-              alt={slide.titulo}
-              className="w-full h-full object-cover opacity-60"
-            />
-            <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
-              <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-4 drop-shadow-lg transform translate-y-0">
-                {slide.titulo}
-              </h1>
-              <p className="text-lg md:text-2xl text-gray-200 max-w-3xl drop-shadow-md">
-                {slide.descripcion}
-              </p>
-              <a
-                href="#/contacto"
-                className="mt-8 bg-cvial-primary hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
-              >
-                Cotizar Proyecto
-              </a>
-            </div>
-          </div>
-        ))}
+        {/* Video background: coloca tu archivo de video en src/assets/hero.mp4 o ajusta la ruta */}
+        <video
+          src={heroVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        />
 
+        {/* Controles manuales para avanzar las frases */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-cvial-primary p-2 md:p-3 rounded-full text-white transition-colors backdrop-blur-sm"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-cvial-primary p-2 md:p-3 rounded-full text-white transition-colors backdrop-blur-sm z-10"
         >
           <ChevronLeft size={30} />
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-cvial-primary p-2 md:p-3 rounded-full text-white transition-colors backdrop-blur-sm"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-cvial-primary p-2 md:p-3 rounded-full text-white transition-colors backdrop-blur-sm z-10"
         >
           <ChevronRight size={30} />
         </button>
 
-        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-3">
+        {/* Overlay con los textos que antes mostraba el carrusel */}
+        <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4 z-10 pointer-events-none">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-4 drop-shadow-lg pointer-events-auto">
+            {slides[currentSlide].titulo}
+          </h1>
+          <p className="text-lg md:text-2xl text-gray-200 max-w-3xl drop-shadow-md pointer-events-auto">
+            {slides[currentSlide].descripcion}
+          </p>
+          <a
+            href="#/contacto"
+            className="mt-8 bg-cvial-primary hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 pointer-events-auto"
+          >
+            Cotizar Proyecto
+          </a>
+        </div>
+
+        {/* Indicadores (dots) para seleccionar frase manualmente */}
+        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-3 z-10">
           {slides.map((_, index) => (
             <button
               key={index}
