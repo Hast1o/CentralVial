@@ -62,7 +62,6 @@ import tachonVastago from '../assets/productos/tachon-amarillo.webp';
 import pegamentoEpoxico from '../assets/productos/pegamento-epoxico.webp';
 import tachonPequenoSinVastago from '../assets/productos/tachon-amarillo-pequeño-sin-vastago.webp';
 import boyaEstandar from '../assets/productos/boya-estandar.webp';
-import cintaReflectante from '../assets/productos/cinta-reflectante.webp';
 import tachonGrandeSinVastago from '../assets/productos/tachon-amarillo-grande-sin-vastago.webp';
 
 // --- IMPORTACIONES: LÁMPARAS VIALES ---
@@ -84,22 +83,7 @@ import espejoInt60 from '../assets/productos/espejo-convexo-interior-60cm.webp';
 import conector60 from '../assets/productos/conector-espejo-60cm.webp';
 import conector80_100 from '../assets/productos/conector-espejo-80-100cm.webp';
 
-// --- IMPORTACIONES: PROTECTORES DE CABLES ---
-import protector2Canales from '../assets/productos/protector-de-cables-de-2-canales.webp';
-import protector3Canales from '../assets/productos/protector-de-cables-de-3-canales.webp';
-import protector4Canales from '../assets/productos/protector-de-cables-de-4-canales.webp';
-import protector5Canales from '../assets/productos/protector-de-cables-de-5-canales.webp';
-
 // --- IMPORTACIONES: CONTENEDORES DE BASURA ACCESORIOS ---
-import piolaSeguridad from '../assets/productos/piola-seguridad-acero.webp';
-import rueda240 from '../assets/productos/rueda-contenedor-240lts.webp';
-import rueda360 from '../assets/productos/rueda-contenedor-360lts.webp';
-import rueda120 from '../assets/productos/rueda-contenedor-120lts.webp';
-import pack4Ruedas1100 from '../assets/productos/pack-4-ruedas-1100lts.webp';
-import pack4Ruedas660 from '../assets/productos/pack-4-ruedas-660lts.webp';
-import compactadorManual from '../assets/productos/compactador-basura-manual.webp';
-import movilizadorContenedores from '../assets/productos/movilizador-contenedores-basura.webp';
-
 // --- IMPORTACIONES: CONTENEDORES DE BASURA CON PEDAL ---
 import contenedorBasuraC30lts from '../assets/productos/contenedor-de-basura-c-30lts.webp';
 import contenedorBasuraC50lts from '../assets/productos/contenedor-de-basura-c-50lts.webp';
@@ -130,24 +114,14 @@ import pegamento from '../assets/AFIN/Pegamento-epoxico-1.png';
 // --- LISTA COMPLETA DE PRODUCTOS ---
 const listaProductos = [
   // --- Afin Suministros ---
-  { id: 201, nombre: "Pintura Acrílica Citycril", categoria: "Afin Suministros", descripcion: "Base solvente para señalización", imagen: imgafin },
-  { id: 202, nombre: "Plástico en Frío Doscril", categoria: "Afin Suministros", descripcion: "Dos componentes de alta duración", imagen: imgdoscril },
-  { id: 203, nombre: "Pintura Acrílica Señacril", categoria: "Afin Suministros", descripcion: "Base solvente de secado rápido", imagen: imgralva },
-  { id: 204, nombre: "Twincril Componente A", categoria: "Afin Suministros", descripcion: "Señalización vial sistema 1:1", imagen: imgtwinA },
-  { id: 205, nombre: "Twincril Componente B", categoria: "Afin Suministros", descripcion: "Catalizador para sistema Twincril", imagen: imgtwinB },
-  { id: 206, nombre: "Pegamento Epóxico", categoria: "Afin Suministros", descripcion: "Para fijación de tachas viales", imagen: pegamento },
-  { id: 207, nombre: "Doscril Rojo", categoria: "Afin Suministros", descripcion: "Plástico en frío antideslizante", imagen: doscrilrojo },
-  { id: 208, nombre: "Microesferas de Vidrio", categoria: "Afin Suministros", descripcion: "Echostar 5 para retroreflectividad", imagen: microesfera },
-
-  // --- Contenedores de Basura ---
-  { id: 80, nombre: "Piola de seguridad acero | 6mm | 1.20mt", categoria: "contenedores de basura", descripcion: "Piola de acero de alta resistencia para asegurar contenedores de basura, evitando robos o desplazamientos no deseados.", imagen: piolaSeguridad },
-  { id: 81, nombre: "Rueda para contenedores de basura 240lts QRubber", categoria: "contenedores de basura", descripcion: "Repuesto de rueda robusta diseñada específicamente para contenedores de 240 litros, fabricada para durar.", imagen: rueda240 },
-  { id: 82, nombre: "Rueda para contenedores de basura 360lts QRubber", categoria: "contenedores de basura", descripcion: "Rueda de alta capacidad de carga para contenedores de 360 litros, ideal para uso intensivo en exteriores.", imagen: rueda360 },
-  { id: 83, nombre: "Rueda para contenedores de basura 120lts QRubber", categoria: "contenedores de basura", descripcion: "Rueda de repuesto para contenedores pequeños de 120 litros, proporciona un desplazamiento suave y estable.", imagen: rueda120 },
-  { id: 84, nombre: "Pack de 4 ruedas para contenedores de basura 1100lts QRubber", categoria: "contenedores de basura", descripcion: "Kit completo de 4 ruedas industriales para contenedores de gran volumen (1100 litros).", imagen: pack4Ruedas1100 },
-  { id: 85, nombre: "Pack de 4 ruedas para contenedores de basura 660lts QRubber", categoria: "contenedores de basura", descripcion: "Set de 4 ruedas resistentes para contenedores de 660 litros, garantizando movilidad total.", imagen: pack4Ruedas660 },
-  { id: 86, nombre: "Compactador de basura manual para contenedores de 120 y 240lts", categoria: "contenedores de basura", descripcion: "Herramienta manual eficiente para reducir el volumen de los residuos dentro del contenedor, optimizando el espacio.", imagen: compactadorManual },
-  { id: 87, nombre: "Movilizador para contenedores de basura de 120 y 240lts", categoria: "contenedores de basura", descripcion: "Accesorio ergonómico que facilita el transporte de contenedores cargados, reduciendo el esfuerzo físico.", imagen: movilizadorContenedores },
+  { id: 201, nombre: "Pintura Acrílica Citycril", categoria: "pintura", descripcion: "Base solvente para señalización", imagen: imgafin },
+  { id: 202, nombre: "Plástico en Frío Doscril", categoria: "pintura", descripcion: "Dos componentes de alta duración", imagen: imgdoscril },
+  { id: 203, nombre: "Pintura Acrílica Señacril", categoria: "pintura", descripcion: "Base solvente de secado rápido", imagen: imgralva },
+  { id: 204, nombre: "Twincril Componente A", categoria: "pintura", descripcion: "Señalización vial sistema 1:1", imagen: imgtwinA },
+  { id: 205, nombre: "Twincril Componente B", categoria: "pintura", descripcion: "Catalizador para sistema Twincril", imagen: imgtwinB },
+  { id: 206, nombre: "Pegamento Epóxico", categoria: "pegamento", descripcion: "Para fijación de tachas viales", imagen: pegamento },
+  { id: 207, nombre: "Doscril Rojo", categoria: "pintura", descripcion: "Plástico en frío antideslizante", imagen: doscrilrojo },
+  { id: 208, nombre: "Microesferas de Vidrio", categoria: "pintura", descripcion: "Echostar 5 para retroreflectividad", imagen: microesfera },
 
   // Contenedores con pedal
   { id: 90, nombre: "Contenedor de basura C 30lts con pedal", categoria: "contenedores de basura", descripcion: "Contenedor compacto de 30 litros con sistema de pedal reforzado, ideal para oficinas o espacios reducidos.", imagen: contenedorBasuraC30lts },
@@ -165,12 +139,6 @@ const listaProductos = [
   { id: 100, nombre: "Contenedor de basura 660lts", categoria: "contenedores de basura", descripcion: "Contenedor de gran capacidad (660 litros) con 4 ruedas, diseñado para el manejo de residuos a nivel industrial o comunitario.", imagen: contenedorDeBasura660ltsSinPedal },
   { id: 101, nombre: "Contenedor de basura 1100lts", categoria: "contenedores de basura", descripcion: "Contenedor industrial de 1100 litros, máxima capacidad y resistencia para la recolección de alto volumen.", imagen: contenedorDeBasura1100ltsSinPedal },
   { id: 102, nombre: "Contenedor de basura 360lts", categoria: "contenedores de basura", descripcion: "Contenedor de 360 litros, excelente equilibrio entre capacidad y maniobrabilidad para áreas de mediano tráfico.", imagen: contenedorDeBasura360ltsSinPedal },
-
-  // --- Protectores de Cables ---
-  { id: 70, nombre: "Protector de cables de 2 canales", categoria: "protectores de cables", descripcion: "Protector de caucho con tapa de seguridad amarilla, diseñado para resguardar hasta 2 cables del tráfico vehicular y peatonal.", imagen: protector2Canales },
-  { id: 71, nombre: "Protector de cables de 3 canales", categoria: "protectores de cables", descripcion: "Módulo de protección para 3 cables con superficie antideslizante y alta resistencia a impactos.", imagen: protector3Canales },
-  { id: 72, nombre: "Protector de cables de 4 canales", categoria: "protectores de cables", descripcion: "Organizador y protector vial para 4 cables, ideal para eventos o zonas industriales con alto flujo de carga.", imagen: protector4Canales },
-  { id: 73, nombre: "Protector de cables de 5 canales", categoria: "protectores de cables", descripcion: "Máxima capacidad de protección para 5 líneas de cables, fabricado en materiales duraderos para uso rudo.", imagen: protector5Canales },
 
   // --- Topes de Estacionamiento ---
   { id: 1, nombre: "Terminal Rampa de Goma 30x30x10cm", categoria: "Tope de estacionamiento", descripcion: "Pieza terminal de goma resistente con elementos reflectantes, ideal para rematar líneas de tope o rampas de forma segura.", imagen: terminalRampa },
@@ -239,11 +207,10 @@ const listaProductos = [
   { id: 43, nombre: "Tacha vial | 10*10*2cm | doble reflectivo | color amarillo | con base arenosa", categoria: "tachas viales", descripcion: "Tacha vial amarilla con doble reflectivo y base arenosa, proporciona excelente visibilidad nocturna y durabilidad.", imagen: tachaAmarillaBase },
   { id: 44, nombre: "Tacha vial | 10*10*2cm | doble reflectivo | color blanca | con base arenosa", categoria: "tachas viales", descripcion: "Tacha vial blanca con doble reflectivo y base arenosa, diseñada para delimitar carriles con máxima fijación.", imagen: tachaBlancaBase },
   { id: 45, nombre: "Tacha vialidad solar | sin vástago | 125*105*25mm | doble Led", categoria: "tachas viales", descripcion: "Tacha vial solar con doble Led y base de aluminio resistente, ideal para señalización nocturna y de seguridad en carreteras.", imagen: tachaSolar },
-  { id: 46, nombre: "Tachón vialidad amarillo 16*25*5cm | con doble reflectivo | con vástago", categoria: "tachas viales", descripcion: "Tachón vial amarillo con doble reflectivo y vástago para una instalación segura y visible en carreteras.", imagen: tachonVastago },
-  { id: 47, nombre: "Pegamento Epóxico | Kit 10 Kilos | Qtraffic 230", categoria: "tachas viales", descripcion: "Kit de pegamento epóxico de 10 kilos de la marca Qtraffic, ideal para la instalación y fijación de tachones y boyas viales.", imagen: pegamentoEpoxico },
-  { id: 48, nombre: "Tachón vialidad amarillo 16*25*3cm | con doble reflectivo | sin vástago", categoria: "tachas viales", descripcion: "Tachón vial amarillo con doble reflectivo, fabricado para una señalización clara y duradera en la vía.", imagen: tachonPequenoSinVastago },
-  { id: 50, nombre: "Cinta tipo reflectante para camión | 50mm | color blanca/roja", categoria: "tachas viales", descripcion: "Cinta reflectante para camión de 50mm de ancho, en color blanco/rojo, con alta reflectividad para mayor seguridad en la vía.", imagen: cintaReflectante },
-  { id: 51, nombre: "Tachón vialidad amarillo 16*25*5cm | con doble reflectivo | sin vástago", categoria: "tachas viales", descripcion: "Tachón vial amarillo con doble reflectivo, de gran tamaño y resistencia, sin vástago para una señalización efectiva.", imagen: tachonGrandeSinVastago },
+  { id: 46, nombre: "Tachón vialidad amarillo 16*25*5cm | con doble reflectivo | con vástago", categoria: "tachon", descripcion: "Tachón vial amarillo con doble reflectivo y vástago para una instalación segura y visible en carreteras.", imagen: tachonVastago },
+  { id: 47, nombre: "Pegamento Epóxico | Kit 10 Kilos | Qtraffic 230", categoria: "pegamento", descripcion: "Kit de pegamento epóxico de 10 kilos de la marca Qtraffic, ideal para la instalación y fijación de tachones y boyas viales.", imagen: pegamentoEpoxico },
+  { id: 48, nombre: "Tachón vialidad amarillo 16*25*3cm | con doble reflectivo | sin vástago", categoria: "tachon", descripcion: "Tachón vial amarillo con doble reflectivo, fabricado para una señalización clara y duradera en la vía.", imagen: tachonPequenoSinVastago },
+  { id: 51, nombre: "Tachón vialidad amarillo 16*25*5cm | con doble reflectivo | sin vástago", categoria: "tachon", descripcion: "Tachón vial amarillo con doble reflectivo, de gran tamaño y resistencia, sin vástago para una señalización efectiva.", imagen: tachonGrandeSinVastago },
 
   // --- LÁMPARAS VIALES ---
   { id: 52, nombre: "Baliza destellante solar LED", categoria: "lamparas viales", descripcion: "Baliza destellante solar con LEDs de alta potencia para una señalización clara y duradera.", imagen: balizaSolarLED },
@@ -303,10 +270,7 @@ export default function Productos() {
           {productosFiltrados.map((producto) => (
             <div
               key={producto.id}
-              className={`bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group border ${producto.categoria === 'Afin Suministros'
-                  ? 'border-yellow-200 border-b-4 border-b-yellow-400'
-                  : 'border-gray-100'
-                }`}
+              className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group border border-gray-100"
             >
               {/* Contenedor de la Imagen */}
               <div className="relative w-full aspect-square overflow-hidden bg-white p-4 flex items-center justify-center">
@@ -319,10 +283,7 @@ export default function Productos() {
                     }`}
                 />
                 {/* Etiqueta de Categoría flotante dinámica */}
-                <div className={`absolute top-3 right-3 text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-sm text-center ${producto.categoria === 'Afin Suministros'
-                    ? 'bg-yellow-400 text-gray-900'
-                    : 'bg-cvial-primary text-white'
-                  }`}>
+                <div className="absolute top-3 right-3 text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-sm text-center bg-cvial-primary text-white">
                   {producto.categoria}
                 </div>
               </div>

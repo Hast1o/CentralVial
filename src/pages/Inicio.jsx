@@ -1,16 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X } from 'lucide-react'; // <-- Se agregó el icono X
 
 // Importa aquí tus imágenes locales
-// import logoAfin from '../assets/logo_afin.png';
 import imgaerodromo from '../assets/aerodromo.png';
 import imgvalla from '../assets/valla.png';
 import paso from '../assets/paso_zebra.png';
-import imgafin from '../assets/AFIN/CITYCRIL-600x666.jpg';
-import imgdoscril from '../assets/AFIN/DOSCRIL-600x666.jpg';
-import imgralva from '../assets/AFIN/pintura-ralva.jpg';
-import imgtwinB from '../assets/AFIN/pintura-Twincril-gris.jpg';
-import imgtwinA from '../assets/AFIN/pintura-Twincril-rojo.jpg';
 import mop from '../assets/empresas/MOP.png';
 import municurico from '../assets/empresas/municipalidad-curico.png';
 import copec from '../assets/empresas/copec.png';
@@ -21,9 +15,11 @@ import malpo from '../assets/empresas/malpo.png';
 import galilea from '../assets/empresas/galilea.png';
 import independencia from '../assets/empresas/independencia.png';
 import mas from '../assets/empresas/mas.png';
-import microesfera from '../assets/AFIN/Microesferas.png';
-import doscrilrojo from '../assets/AFIN/Doscrilralvarojo.png';
-import pegamento from '../assets/AFIN/Pegamento-epoxico-1.png';
+import dgacLogo from '../assets/empresas/DGAC.png'; 
+
+// Importa aquí las fotos de los trabajos realizados (EJEMPLOS)
+// import trabajoMOP from '../assets/trabajos/trabajo_mop.jpg';
+// import trabajoCurico from '../assets/trabajos/trabajo_curico.jpg';
 
 const slides = [
   {
@@ -46,34 +42,26 @@ const slides = [
   }
 ];
 
-// --- DATOS DE CLIENTES (13 Grillas) ---
+// --- DATOS DE CLIENTES ---
+// NOTA: Reemplaza 'imgaerodromo' o 'paso' por las fotos reales de tus trabajos
 const clientes = [
-  { id: 1, nombre: "Const. Independencia", rubro: "Constructora", logo: independencia },
-  { id: 2, nombre: "Const. Galilea", rubro: "Constructora", logo: galilea },
-  { id: 3, nombre: "Const. Malpo", rubro: "Constructora", logo: malpo },
-  { id: 4, nombre: "Municipalidad Curico", rubro: "Municipio", logo: municurico },
-  { id: 5, nombre: "Const. Demotrón", rubro: "Constructora", logo: demotron },
-  { id: 7, nombre: "Const. Paso Ancho", rubro: "Constructora", logo: pasoancho },
-  { id: 10, nombre: "Magotteaux Andino", rubro: "Empresa", logo: magotteaux },
-  { id: 12, nombre: "Mantenimiento COPEC", rubro: "Servicios", logo: copec },
-  { id: 13, nombre: "Obras Viales MOP", rubro: "Sector Público", logo: mop },
-  { id: 14, nombre: "y muchas mas", rubro: "varios", logo: mas },
-];
-
-// --- DATOS PRODUCTOS AFIN (8 Ítems) ---
-const productosAfin = [
-  { id: 1, nombre: "Pintura Acrílica Citycril", descripcion: "Base solvente para señalización", imagen: imgafin },
-  { id: 2, nombre: "Plástico en Frío Doscril", descripcion: "Dos componentes de alta duración", imagen: imgdoscril },
-  { id: 3, nombre: "Pintura Acrílica Señacril", descripcion: "Base solvente de secado rápido", imagen: imgralva },
-  { id: 4, nombre: "Twincril Componente A", descripcion: "Señalización vial sistema 1:1", imagen: imgtwinA },
-  { id: 5, nombre: "Twincril Componente B", descripcion: "Catalizador para sistema Twincril", imagen: imgtwinB },
-  { id: 6, nombre: "Pegamento Epóxico", descripcion: "Para fijación de tachas viales", imagen: pegamento },
-  { id: 7, nombre: "Doscril Rojo", descripcion: "Plástico en frío antideslizante", imagen: doscrilrojo },
-  { id: 8, nombre: "Microesferas de Vidrio", descripcion: "Echostar 5 para retroreflectividad", imagen: microesfera }
+  { id: 1, nombre: "Const. Independencia", rubro: "Constructora", logo: independencia, trabajoImagen: paso, trabajoDescripcion: "Demarcación de estacionamientos y pasos peatonales en nuevo proyecto habitacional." },
+  { id: 2, nombre: "Const. Galilea", rubro: "Constructora", logo: galilea, trabajoImagen: imgvalla, trabajoDescripcion: "Instalación de señalética vertical y barreras de contención en zonas de curva." },
+  { id: 3, nombre: "Const. Malpo", rubro: "Constructora", logo: malpo, trabajoImagen: imgaerodromo, trabajoDescripcion: "Pintura termoplástica en vías principales de loteo urbano." },
+  { id: 4, nombre: "Municipalidad Curicó", rubro: "Municipio", logo: municurico, trabajoImagen: paso, trabajoDescripcion: "Renovación completa de pasos de cebra y lomos de toro en el centro cívico." },
+  { id: 5, nombre: "Const. Demotrón", rubro: "Constructora", logo: demotron, trabajoImagen: imgvalla, trabajoDescripcion: "Suministro de elementos de mitigación para faenas viales de largo plazo." },
+  { id: 7, nombre: "Const. Paso Ancho", rubro: "Constructora", logo: pasoancho, trabajoImagen: imgaerodromo, trabajoDescripcion: "Señalización de seguridad para cruces peligrosos en sector rural." },
+  { id: 10, nombre: "Magotteaux Andino", rubro: "Empresa", logo: magotteaux, trabajoImagen: paso, trabajoDescripcion: "Demarcación de zonas de seguridad y tránsito de grúas horquilla en interior de planta industrial." },
+  { id: 12, nombre: "Mantenimiento COPEC", rubro: "Servicios", logo: copec, trabajoImagen: imgvalla, trabajoDescripcion: "Pintura acrílica de alta resistencia para zonas de carga de combustible." },
+  { id: 13, nombre: "Obras Viales MOP", rubro: "Sector Público", logo: mop, trabajoImagen: imgaerodromo, trabajoDescripcion: "Demarcación de eje central y bordes en ruta R-5, cumpliendo estándar normativo MOP." },
+  { id: 11, nombre: "DGAC", rubro: "Entidad Aeronáutica", logo: dgacLogo, trabajoImagen: imgaerodromo, trabajoDescripcion: "Demarcación especializada de pistas de aterrizaje y zonas de rodaje en aeródromo local." },
+  { id: 14, nombre: "Y muchas más...", rubro: "Varios", logo: mas, trabajoImagen: paso, trabajoDescripcion: "Cientos de proyectos exitosos avalan nuestra experiencia y compromiso con la seguridad vial." },
 ];
 
 export default function Inicio() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  // --- NUEVO ESTADO PARA EL MODAL ---
+  const [clienteSeleccionado, setClienteSeleccionado] = useState(null);
 
   const nextSlide = () => setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
   const prevSlide = () => setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
@@ -83,8 +71,20 @@ export default function Inicio() {
     return () => clearInterval(timer);
   }, []);
 
+  // --- FUNCIONES PARA BLOQUEAR EL SCROLL CUANDO EL MODAL ESTÁ ABIERTO ---
+  useEffect(() => {
+    if (clienteSeleccionado) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [clienteSeleccionado]);
+
   return (
-    <div className="bg-cvial-light min-h-screen pb-10">
+    <div className="bg-cvial-light min-h-screen pb-10 relative">
 
       {/* --- SECCIÓN 1: HERO / CARRUSEL --- */}
       <div className="relative w-full h-[60vh] md:h-[75vh] overflow-hidden bg-black">
@@ -139,7 +139,7 @@ export default function Inicio() {
         </div>
       </div>
 
-      {/* --- SECCIÓN 2: CLIENTES (13 Tarjetas Flotantes) --- */}
+      {/* --- SECCIÓN 2: CLIENTES (Tarjetas interactivas) --- */}
       <div className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-extrabold text-cvial-secondary mb-4">
@@ -147,7 +147,7 @@ export default function Inicio() {
           </h2>
           <div className="w-24 h-1 bg-cvial-primary mx-auto mb-6 rounded-full"></div>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Hemos ejecutado exitosamente proyectos profesionales, trabajando con marcas, constructoras y entidades líderes en el rubro.
+            Hemos ejecutado exitosamente proyectos profesionales, trabajando con marcas, constructoras y entidades líderes en el rubro. <strong>Haz clic en los logos para ver nuestros trabajos.</strong>
           </p>
         </div>
 
@@ -155,7 +155,8 @@ export default function Inicio() {
           {clientes.map((cliente) => (
             <div
               key={cliente.id}
-              className="bg-white rounded-2xl p-4 flex flex-col items-center justify-center border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-default"
+              onClick={() => setClienteSeleccionado(cliente)} // <-- Evento onClick agregado
+              className="bg-white rounded-2xl p-4 flex flex-col items-center justify-center border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer" // <-- cursor-pointer agregado
             >
               <div className="h-16 md:h-20 w-full flex items-center justify-center mb-3">
                 <img
@@ -173,47 +174,64 @@ export default function Inicio() {
         </div>
       </div>
 
-      {/* --- SECCIÓN 3: DISTRIBUIDORES AFIN SUMINISTROS --- */}
-      <div className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-50 rounded-3xl border border-gray-200">
-        <div className="text-center mb-12">
-          <div className="inline-block bg-yellow-400 text-gray-900 font-extrabold px-6 py-2 rounded-full mb-4 shadow-sm uppercase tracking-wider text-sm">
-            Distribuidor Oficial
-          </div>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-4">
-            AFIN Suministros
-          </h2>
-          <div className="w-24 h-1 bg-yellow-400 mx-auto mb-6 rounded-full"></div>
-          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-            Garantizamos la mejor calidad en demarcación utilizando pinturas y materiales líderes en la industria de la señalización vial.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {productosAfin.map((producto) => (
-            <div
-              key={producto.id}
-              className="bg-white rounded-2xl p-6 flex flex-col items-center justify-center border-b-4 border-yellow-400 shadow-md hover:shadow-xl hover:border-yellow-500 transition-all duration-300 transform hover:-translate-y-2 cursor-default group"
+      {/* --- SECCIÓN 3: MODAL DE TRABAJO (Solo se renderiza si hay un cliente seleccionado) --- */}
+      {clienteSeleccionado && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 backdrop-blur-sm p-4 transition-opacity duration-300"
+          onClick={() => setClienteSeleccionado(null)} // Cierra el modal si haces clic fuera de la tarjeta
+        >
+          <div 
+            className="bg-white rounded-3xl max-w-3xl w-full overflow-hidden shadow-2xl relative transform transition-all"
+            onClick={(e) => e.stopPropagation()} // Evita que el clic dentro de la tarjeta cierre el modal
+          >
+            {/* Botón Cerrar */}
+            <button 
+              onClick={() => setClienteSeleccionado(null)}
+              className="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors z-10 backdrop-blur-md"
             >
-              <div className="h-32 w-full flex items-center justify-center mb-4 overflow-hidden">
-                <img
-                  src={producto.imagen}
-                  alt={producto.nombre}
-                  className={`object-contain transition-transform duration-500 ${producto.id === 7
-                      ? 'scale-[0.7] group-hover:scale-[0.8]' // Ajustado a 160% base y 175% en hover
-                      : 'max-h-full max-w-full group-hover:scale-110' // Comportamiento normal para el resto
-                    }`}
-                />
+              <X size={24} />
+            </button>
+
+            {/* Imagen del trabajo */}
+            <div className="w-full h-64 md:h-80 bg-gray-200 relative">
+              <img 
+                src={clienteSeleccionado.trabajoImagen} 
+                alt={`Trabajo realizado para ${clienteSeleccionado.nombre}`} 
+                className="w-full h-full object-cover"
+              />
+              {/* Degradado en la parte inferior de la imagen para que el logo resalte */}
+              <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent"></div>
+            </div>
+
+            {/* Contenido (Logo y Descripción) */}
+            <div className="px-6 md:px-10 pb-10 pt-2 relative -mt-12">
+              <div className="flex flex-col md:flex-row md:items-end gap-6 mb-6">
+                <div className="bg-white p-4 rounded-2xl shadow-lg inline-block border border-gray-100">
+                  <img 
+                    src={clienteSeleccionado.logo} 
+                    alt={clienteSeleccionado.nombre} 
+                    className="h-16 md:h-20 w-auto object-contain"
+                  />
+                </div>
+                <div className="pb-2">
+                  <h3 className="text-2xl md:text-3xl font-extrabold text-cvial-secondary leading-tight">
+                    {clienteSeleccionado.nombre}
+                  </h3>
+                  <span className="text-sm text-cvial-primary font-bold uppercase tracking-widest">
+                    {clienteSeleccionado.rubro}
+                  </span>
+                </div>
               </div>
-              <h3 className="font-bold text-gray-800 text-center text-sm md:text-base leading-tight">
-                {producto.nombre}
-              </h3>
-              <p className="text-xs text-yellow-600 font-semibold uppercase tracking-wider mt-2 text-center">
-                {producto.descripcion}
+              
+              <div className="w-16 h-1 bg-cvial-primary mb-6 rounded-full"></div>
+              
+              <p className="text-gray-600 text-base md:text-lg leading-relaxed">
+                {clienteSeleccionado.trabajoDescripcion}
               </p>
             </div>
-          ))}
+          </div>
         </div>
-      </div>
+      )}
 
     </div>
   );
