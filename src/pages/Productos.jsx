@@ -167,6 +167,7 @@ import hitoT130 from '../assets/lorenzini/hito-t130.png';
 import hitoTubularAbatible from '../assets/lorenzini/hito-tubular-abatible.png';
 import hitoTubularEstatico from '../assets/lorenzini/hito-tubular-estatico.png';
 import hitoTubularFlexible from '../assets/lorenzini/hito-tubular-flexible.png';
+import panelSpringback from '../assets/lorenzini/panel-abatible-springback.png';
 
 // Importaciones - Lorenzini Iluminación Vial
 import kitBalizas from '../assets/lorenzini/kit-de-balizas-destellantes.png';
