@@ -41,19 +41,18 @@ const slides = [
 ];
 
 // --- DATOS DE CLIENTES ---
-// NOTA: Reemplaza 'imgaerodromo' o 'paso' por las fotos reales de tus trabajos
 const clientes = [
-  { id: 1, nombre: "Const. Independencia", rubro: "Constructora", logo: independencia, trabajoImagen: paso, trabajoDescripcion: "Demarcación de estacionamientos y pasos peatonales en nuevo proyecto habitacional." },
-  { id: 2, nombre: "Const. Galilea", rubro: "Constructora", logo: galilea, trabajoImagen: imgvalla, trabajoDescripcion: "Instalación de señalética vertical y barreras de contención en zonas de curva." },
-  { id: 3, nombre: "Const. Malpo", rubro: "Constructora", logo: malpo, trabajoImagen: imgaerodromo, trabajoDescripcion: "Pintura termoplástica en vías principales de loteo urbano." },
-  { id: 4, nombre: "Municipalidad Curicó", rubro: "Municipio", logo: municurico, trabajoImagen: paso, trabajoDescripcion: "Renovación completa de pasos de cebra y lomos de toro en el centro cívico." },
-  { id: 5, nombre: "Const. Demotrón", rubro: "Constructora", logo: demotron, trabajoImagen: imgvalla, trabajoDescripcion: "Suministro de elementos de mitigación para faenas viales de largo plazo." },
-  { id: 7, nombre: "Const. Paso Ancho", rubro: "Constructora", logo: pasoancho, trabajoImagen: imgaerodromo, trabajoDescripcion: "Señalización de seguridad para cruces peligrosos en sector rural." },
-  { id: 10, nombre: "Magotteaux Andino", rubro: "Empresa", logo: magotteaux, trabajoImagen: paso, trabajoDescripcion: "Demarcación de zonas de seguridad y tránsito de grúas horquilla en interior de planta industrial." },
-  { id: 12, nombre: "Mantenimiento COPEC", rubro: "Servicios", logo: copec, trabajoImagen: imgvalla, trabajoDescripcion: "Pintura acrílica de alta resistencia para zonas de carga de combustible." },
-  { id: 13, nombre: "Obras Viales MOP", rubro: "Sector Público", logo: mop, trabajoImagen: imgaerodromo, trabajoDescripcion: "Demarcación de eje central y bordes en ruta R-5, cumpliendo estándar normativo MOP." },
-  { id: 11, nombre: "DGAC", rubro: "Entidad Aeronáutica", logo: dgacLogo, trabajoImagen: imgaerodromo, trabajoDescripcion: "Demarcación especializada de pistas de aterrizaje y zonas de rodaje en aeródromo local." },
-  { id: 14, nombre: "Y muchas más...", rubro: "Varios", logo: mas, trabajoImagen: paso, trabajoDescripcion: "Cientos de proyectos exitosos avalan nuestra experiencia y compromiso con la seguridad vial." },
+  { id: 1, nombre: "Const. Independencia", rubro: "Constructora", logo: independencia },
+  { id: 2, nombre: "Const. Galilea", rubro: "Constructora", logo: galilea },
+  { id: 3, nombre: "Const. Malpo", rubro: "Constructora", logo: malpo },
+  { id: 4, nombre: "Municipalidad Curicó", rubro: "Municipio", logo: municurico },
+  { id: 5, nombre: "Const. Demotrón", rubro: "Constructora", logo: demotron },
+  { id: 7, nombre: "Const. Paso Ancho", rubro: "Constructora", logo: pasoancho },
+  { id: 10, nombre: "Magotteaux Andino", rubro: "Empresa", logo: magotteaux },
+  { id: 12, nombre: "Mantenimiento COPEC", rubro: "Servicios", logo: copec },
+  { id: 13, nombre: "Obras Viales MOP", rubro: "Sector Público", logo: mop },
+  { id: 11, nombre: "DGAC", rubro: "Entidad Aeronáutica", logo: dgacLogo },
+  { id: 14, nombre: "Y muchas más...", rubro: "Varios", logo: mas },
 ];
 
 export default function Inicio() {
@@ -146,7 +145,7 @@ export default function Inicio() {
           </h2>
           <div className="w-24 h-1 bg-cvial-primary mx-auto mb-6 rounded-full"></div>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Hemos ejecutado exitosamente proyectos profesionales, trabajando con marcas, constructoras y entidades líderes en el rubro. <strong>Haz clic en los logos para ver nuestros trabajos.</strong>
+            Hemos ejecutado exitosamente proyectos profesionales, trabajando con marcas, constructoras y entidades líderes en el rubro. <strong>Haz clic en los logos para ver la información de cada empresa.</strong>
           </p>
         </div>
 
@@ -191,19 +190,8 @@ export default function Inicio() {
               <X size={24} />
             </button>
 
-            {/* Imagen del trabajo */}
-            <div className="w-full h-64 md:h-80 bg-gray-200 relative">
-              <img 
-                src={clienteSeleccionado.trabajoImagen} 
-                alt={`Trabajo realizado para ${clienteSeleccionado.nombre}`} 
-                className="w-full h-full object-cover"
-              />
-              {/* Degradado en la parte inferior de la imagen para que el logo resalte */}
-              <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent"></div>
-            </div>
-
-            {/* Contenido (Logo y Descripción) */}
-            <div className="px-6 md:px-10 pb-10 pt-2 relative -mt-12">
+            {/* Contenido (Logo e información básica) */}
+            <div className="px-6 md:px-10 pb-10 pt-10 relative">
               <div className="flex flex-col md:flex-row md:items-end gap-6 mb-6">
                 <div className="bg-white p-4 rounded-2xl shadow-lg inline-block border border-gray-100">
                   <img 
@@ -223,10 +211,6 @@ export default function Inicio() {
               </div>
               
               <div className="w-16 h-1 bg-cvial-primary mb-6 rounded-full"></div>
-              
-              <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-                {clienteSeleccionado.trabajoDescripcion}
-              </p>
             </div>
           </div>
         </div>

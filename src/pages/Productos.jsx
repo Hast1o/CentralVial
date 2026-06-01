@@ -87,10 +87,10 @@ import terminalEstandar_viz from '../assets/productos/terminal-lomo-de-toro-90x1
 import terminalPremium25x90_viz from '../assets/productos/terminal-lomo-de-toro-premium-25x90x5-negro-o-amarillo.webp';
 
 // Importaciones - Lorenzini Adhesivos y Señalética
-import kitEpoxico from '../assets/lorenzini/kit-pegamento-epoxico.png';
-import pegamentoBituminoso from '../assets/lorenzini/pegamento-bituminoso.png';
-import pegamentoPlastigum from '../assets/lorenzini/pegamento-plastigum.png';
-import posteOmega from '../assets/lorenzini/poste-omega-galbanizado.png';
+import kitEpoxico from '../assets/lorenzini/kit-pegamento-epoxico.webp';
+import pegamentoBituminoso from '../assets/lorenzini/pegamento-bituminoso.webp';
+import pegamentoPlastigum from '../assets/lorenzini/pegamento-plastigum.webp';
+import posteOmega from '../assets/lorenzini/poste-omega-galbanizado.webp';
 import señalesTransito from '../assets/lorenzini/señales-de-transito.png';
 
 // Importaciones - Lorenzini Balizas
@@ -104,41 +104,41 @@ import balizaSolarHitos from '../assets/lorenzini/baliza-solar-para-hitos.png';
 // Importaciones - Lorenzini Canalizadores, Barreras y Paletas
 import barreraNewJersey from '../assets/lorenzini/barrera-new-jersey.png';
 import barreraNewJerseyApilable from '../assets/lorenzini/barrera-new-jersey-apilable.png';
-import canalizadorJaguar from '../assets/lorenzini/Canalizador-jaguar.png';
-import canalizadorZebra from '../assets/lorenzini/canalizador-zebra.png';
-import canalizadorZebraZero from '../assets/lorenzini/canalizador-ciclovia-zebra-zero.png';
-import paletaPareSiga from '../assets/lorenzini/paleta-pare-siga.png';
+import canalizadorJaguar from '../assets/lorenzini/canalizador-jaguar.webp';
+import canalizadorZebra from '../assets/lorenzini/canalizador-zebra.webp';
+import canalizadorZebraZero from '../assets/lorenzini/canalizador-ciclovia-zebra-zero.webp';
+import paletaPareSiga from '../assets/lorenzini/paleta-pare-siga.webp';
 import paletaPareSigaLed from '../assets/lorenzini/paleta-pare-siga-led.png';
 import paletaPareSigaPlegable from '../assets/lorenzini/paleta-pare-siga-plegable.png';
-import segregadorParis from '../assets/lorenzini/segregador-paris.png';
-import segregadorReflectivo from '../assets/lorenzini/segregador-vial-con-reflectivo.png';
+import segregadorParis from '../assets/lorenzini/segregador-paris.webp';
+import segregadorReflectivo from '../assets/lorenzini/segregador-vial-con-reflectivo.webp';
 
 // Importaciones - Lorenzini Captafaros
-import captafaroAngular from '../assets/lorenzini/captafaro-angular.png';
-import ojoGatoAbatible from '../assets/lorenzini/ojo-de-gato-abatible.png';
-import ojoGatoAbatibleTriangular from '../assets/lorenzini/ojo-de-gato-abatible-triangular.png';
-import ojoGatoReflectanteTriangular from '../assets/lorenzini/ojo-de-gato-reflectante-triangular.png';
+import captafaroAngular from '../assets/lorenzini/captaforo-angular.webp';
+import ojoGatoAbatible from '../assets/lorenzini/ojo-de-gato-abatible.webp';
+import ojoGatoAbatibleTriangular from '../assets/lorenzini/ojo-de-gato-abatible-triangular.webp';
+import ojoGatoReflectanteTriangular from '../assets/lorenzini/ojo-de-gato-reflectante-triangular.webp';
 import ojoGatoTipoA from '../assets/lorenzini/ojo-de-gato-tipo-a.png';
 import ojoGatoTipoB from '../assets/lorenzini/ojo-de-gato-tipo-b.png';
 
 // Importaciones - Lorenzini Conos
 import baseConos from '../assets/lorenzini/base-para-conos.png';
-import cono12 from '../assets/lorenzini/cono12.png';
-import cono18 from '../assets/lorenzini/cono18.png';
+import cono12 from '../assets/lorenzini/cono12.webp';
+import cono18 from '../assets/lorenzini/cono18.webp';
 import cono28 from '../assets/lorenzini/cono28.png';
-import cono28Retractil from '../assets/lorenzini/cono28-retractil.png';
+import cono28Retractil from '../assets/lorenzini/cono28-retractil.webp';
 import cono36 from '../assets/lorenzini/cono36.png';
-import cono36AntiViento from '../assets/lorenzini/cono36-anti-viento.png';
+import cono36AntiViento from '../assets/lorenzini/cono36-anti-viento.webp';
 import cono36Retractil from '../assets/lorenzini/cono36-retractil.png';
 
 // Importaciones - Lorenzini Defensas y Postes
 import defensaCaminera from '../assets/lorenzini/defensa-caminera.png';
 import pernosDefensas from '../assets/lorenzini/pernos-para-defensas.png';
-import posteCostanera from '../assets/lorenzini/poste-costanera.png';
-import posteZebra from '../assets/lorenzini/poste-zebra.png';
-import separadorDefensa from '../assets/lorenzini/separador-de-defensa.png';
-import terminalMichigan from '../assets/lorenzini/terminal-michigan.png';
-import terminalSimple from '../assets/lorenzini/terminal-simple-galvanizado.png';
+import posteCostanera from '../assets/lorenzini/poste-costanera.webp';
+import posteZebra from '../assets/lorenzini/poste-zebra.webp';
+import separadorDefensa from '../assets/lorenzini/separador-de-defensa.webp';
+import terminalMichigan from '../assets/lorenzini/terminal-michigan.webp';
+import terminalSimple from '../assets/lorenzini/terminal-simple-galvanizado.webp';
 import terminalSkt from '../assets/lorenzini/terminal-skt.png';
 
 // Importaciones - Lorenzini Hitos
@@ -170,28 +170,28 @@ import hitoTubularFlexible from '../assets/lorenzini/hito-tubular-flexible.png';
 import panelSpringback from '../assets/lorenzini/panel-abatible-springback.png';
 
 // Importaciones - Lorenzini Iluminación Vial
-import kitBalizas from '../assets/lorenzini/kit-de-balizas-destellantes.png';
-import lamparaBidireccionalConos from '../assets/lorenzini/lampara-bidireccional-para-conos.png';
-import lamparaDestellantePortatil from '../assets/lorenzini/lampara-destellante-portatil.png';
-import lamparaFaena from '../assets/lorenzini/lampara-de-faena.png';
-import lamparaRedondaConos from '../assets/lorenzini/lampara-redonda-para-conos.png';
-import lamparaSolar from '../assets/lorenzini/lampara-solar.png';
-import lamparaSolarAdvertencia from '../assets/lorenzini/lampara-solar-advertencia-conos.png';
-import lamparaSolarAltoBrillo from '../assets/lorenzini/lampara-solar-alto-brillo.png';
-import lamparaSolarDobleFoco from '../assets/lorenzini/lampara-solar-doble-foco-para-conos.png';
+import kitBalizas from '../assets/lorenzini/kit-de-balizas-destellantes.webp';
+import lamparaBidireccionalConos from '../assets/lorenzini/lampara-bidireccional-para-conos.webp';
+import lamparaDestellantePortatil from '../assets/lorenzini/lampara-destellante-portatil.webp';
+import lamparaFaena from '../assets/lorenzini/lampara-de-faena.webp';
+import lamparaRedondaConos from '../assets/lorenzini/lampara-redonda-para-conos.webp';
+import lamparaSolar from '../assets/lorenzini/lampara-solar.webp';
+import lamparaSolarAdvertencia from '../assets/lorenzini/lampara-solar-advertencia-conos.webp';
+import lamparaSolarAltoBrillo from '../assets/lorenzini/lampara-solar-alto-brillo.webp';
+import lamparaSolarDobleFoco from '../assets/lorenzini/lampara-solar-doble-foco-para-conos.webp';
 import sistemaCanalizacion from '../assets/lorenzini/sistema-de-canalizacion.png';
 
 // Importaciones - Lorenzini Pinturas
-import kitDobleComponente from '../assets/lorenzini/kit-pintura-doble-componente-A+B.png';
-import microesferasVial from '../assets/lorenzini/microesferas.png';
-import pinturaAcrilicaAgua from '../assets/lorenzini/pintura-acrilica-base-agua.png';
-import pinturaAcrilicaSolvente from '../assets/lorenzini/pintura-acrilica-base-solvente.png';
-import pinturaKataline from '../assets/lorenzini/pintura-kataline.png';
-import pinturaTermoplasticaMarcas from '../assets/lorenzini/pintura-termoplastica-marcas-viales.png';
-import pinturaTermoplasticaVialPaint from '../assets/lorenzini/pintura-termiplastica-vial-paint.png';
-import primerPreformadoEpoxico from '../assets/lorenzini/primer-termoplastico-preformado-y-solvente-epoxico.png';
-import primerTermoplastico from '../assets/lorenzini/primer-termoplastico.png';
-import solventeAcrilico from '../assets/lorenzini/solvente-acrilico.png';
+import kitDobleComponente from '../assets/lorenzini/kit-pintura-doble-componente-A+B.webp';
+import microesferasVial from '../assets/lorenzini/microesferas.webp';
+import pinturaAcrilicaAgua from '../assets/lorenzini/pintura-acrilica-base-agua.webp';
+import pinturaAcrilicaSolvente from '../assets/lorenzini/pintura-acrilica-base-solvente.webp';
+import pinturaKataline from '../assets/lorenzini/pintura-kataline.webp';
+import pinturasemex from '../assets/lorenzini/pintura-semex.webp';
+import pinturaTermoplasticaMarcas from '../assets/lorenzini/pintura-termoplastica-marcas-viales.webp';
+import primerPreformadoEpoxico from '../assets/lorenzini/primer-termoplastico-preformado-y-solvente-epoxico.webp';
+import primerTermoplastico from '../assets/lorenzini/primer-termoplastico.webp';
+import solventeAcrilico from '../assets/lorenzini/solvente-acrilico.webp';
 
 // Importaciones - Lorenzini Tachas
 import tachaElectricaLed from '../assets/lorenzini/tacha-electrica-led.png';
@@ -336,8 +336,8 @@ const listaProductos = [
   { id: 315, codigo: "CV-315", nombre: "Tachón Bidireccional sin Vástago", categoria: "tachon", descripcion: "Reductor de velocidad y delineador de alta resistencia con reflectancia en ambos sentidos, diseñado para instalación superficial.", imagen: tachonBidireccionalSinVastago },
   { id: 323, codigo: "CV-323", nombre: "Pintura Acrílica Base Agua", categoria: "pintura", descripcion: "Pintura ecológica de secado rápido diseñada para demarcación vial urbana y estacionamientos con bajo impacto ambiental.", imagen: pinturaAcrilicaAgua },
   { id: 324, codigo: "CV-324", nombre: "Pintura Acrílica Base Solvente", categoria: "pintura", descripcion: "Fórmula de alta durabilidad y adherencia, resistente a la abrasión vehicular y condiciones climáticas exigentes.", imagen: pinturaAcrilicaSolvente },
-  { id: 325, codigo: "CV-325", nombre: "Pintura Termoplástica Kataline", categoria: "pintura", descripcion: "Compuesto sólido que se aplica en caliente para obtener capas de gran espesor y máxima vida útil en carreteras de alto tráfico.", imagen: pinturaTermoplasticaVialPaint },
-  { id: 326, codigo: "CV-326", nombre: "Pintura Semex", categoria: "pintura", descripcion: "Pintura técnica especializada para señalización horizontal de alto desempeño con excelentes propiedades de retrorreflexión.", imagen: pinturaKataline },
+  { id: 325, codigo: "CV-325", nombre: "Pintura Termoplástica Kataline", categoria: "pintura", descripcion: "Compuesto sólido que se aplica en caliente para obtener capas de gran espesor y máxima vida útil en carreteras de alto tráfico.", imagen: pinturaKataline },
+  { id: 326, codigo: "CV-326", nombre: "Pintura Semex", categoria: "pintura", descripcion: "Pintura técnica especializada para señalización horizontal de alto desempeño con excelentes propiedades de retrorreflexión.", imagen: pinturasemex },
   { id: 327, codigo: "CV-327", nombre: "Pintura Termoplástica Marcas Viales", categoria: "pintura", descripcion: "Solución termoplástica premium para la creación de símbolos, flechas y líneas continuas de larga duración en pavimentos.", imagen: pinturaTermoplasticaMarcas },
   { id: 328, codigo: "CV-328", nombre: "Kit Pintura Doble Componente A+B", categoria: "pintura", descripcion: "Sistema de señalización de alta resistencia que requiere la mezcla de dos componentes para un fraguado químico duradero.", imagen: kitDobleComponente },
   { id: 329, codigo: "CV-329", nombre: "Microesferas de Vidrio", categoria: "pintura", descripcion: "Agente reflectante que se aplica sobre la pintura fresca para otorgar propiedades de visibilidad nocturna y retrorreflexión.", imagen: microesferasVial },
