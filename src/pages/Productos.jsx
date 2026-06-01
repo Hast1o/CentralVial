@@ -94,22 +94,22 @@ import posteOmega from '../assets/lorenzini/poste-omega-galbanizado.webp';
 import señalesTransito from '../assets/lorenzini/señales-de-transito.png';
 
 // Importaciones - Lorenzini Balizas
-import balizaEmergencia from '../assets/lorenzini/baliza-de-emergencia.png';
-import balizaLedAcceso from '../assets/lorenzini/baliza-led-para-acceso-vehicular.png';
-import balizaMagneticaVehiculos from '../assets/lorenzini/baliza-magnetica-para-vehiculos.png';
-import balizaSolarClip from '../assets/lorenzini/baliza-solar-de-clip.png';
-import balizaSolarConos from '../assets/lorenzini/baliza-solar-para-conos.png';
-import balizaSolarHitos from '../assets/lorenzini/baliza-solar-para-hitos.png';
+import balizaEmergencia from '../assets/lorenzini/baliza-de-emergencia.webp';
+import balizaLedAcceso from '../assets/lorenzini/baliza-led-para-acceso-vehicular.webp';
+import balizaMagneticaVehiculos from '../assets/lorenzini/baliza-magnetica-para-vehiculos.webp';
+import balizaSolarClip from '../assets/lorenzini/baliza-solar-de-clip.webp';
+import balizaSolarConos from '../assets/lorenzini/baliza-solar-para-conos.webp';
+import balizaSolarHitos from '../assets/lorenzini/baliza-solar-para-hitos.webp';
 
 // Importaciones - Lorenzini Canalizadores, Barreras y Paletas
-import barreraNewJersey from '../assets/lorenzini/barrera-new-jersey.png';
-import barreraNewJerseyApilable from '../assets/lorenzini/barrera-new-jersey-apilable.png';
+import barreraNewJersey from '../assets/lorenzini/barrera-new-jersey.webp';
+import barreraNewJerseyApilable from '../assets/lorenzini/barrera-new-jersey-apilable.webp';
 import canalizadorJaguar from '../assets/lorenzini/canalizador-jaguar.webp';
 import canalizadorZebra from '../assets/lorenzini/canalizador-zebra.webp';
 import canalizadorZebraZero from '../assets/lorenzini/canalizador-ciclovia-zebra-zero.webp';
 import paletaPareSiga from '../assets/lorenzini/paleta-pare-siga.webp';
-import paletaPareSigaLed from '../assets/lorenzini/paleta-pare-siga-led.png';
-import paletaPareSigaPlegable from '../assets/lorenzini/paleta-pare-siga-plegable.png';
+import paletaPareSigaLed from '../assets/lorenzini/paleta-pare-siga-led.webp';
+import paletaPareSigaPlegable from '../assets/lorenzini/paleta-pare-siga-plegable.webp';
 import segregadorParis from '../assets/lorenzini/segregador-paris.webp';
 import segregadorReflectivo from '../assets/lorenzini/segregador-vial-con-reflectivo.webp';
 
@@ -118,56 +118,56 @@ import captafaroAngular from '../assets/lorenzini/captaforo-angular.webp';
 import ojoGatoAbatible from '../assets/lorenzini/ojo-de-gato-abatible.webp';
 import ojoGatoAbatibleTriangular from '../assets/lorenzini/ojo-de-gato-abatible-triangular.webp';
 import ojoGatoReflectanteTriangular from '../assets/lorenzini/ojo-de-gato-reflectante-triangular.webp';
-import ojoGatoTipoA from '../assets/lorenzini/ojo-de-gato-tipo-a.png';
-import ojoGatoTipoB from '../assets/lorenzini/ojo-de-gato-tipo-b.png';
+import ojoGatoTipoA from '../assets/lorenzini/ojo-de-gato-tipo-a.webp';
+import ojoGatoTipoB from '../assets/lorenzini/ojo-de-gato-tipo-b.webp';
 
 // Importaciones - Lorenzini Conos
-import baseConos from '../assets/lorenzini/base-para-conos.png';
+import baseConos from '../assets/lorenzini/base-para-conos.webp';
 import cono12 from '../assets/lorenzini/cono12.webp';
 import cono18 from '../assets/lorenzini/cono18.webp';
-import cono28 from '../assets/lorenzini/cono28.png';
+import cono28 from '../assets/lorenzini/cono28.webp';
 import cono28Retractil from '../assets/lorenzini/cono28-retractil.webp';
-import cono36 from '../assets/lorenzini/cono36.png';
+import cono36 from '../assets/lorenzini/cono36.webp';
 import cono36AntiViento from '../assets/lorenzini/cono36-anti-viento.webp';
-import cono36Retractil from '../assets/lorenzini/cono36-retractil.png';
+import cono36Retractil from '../assets/lorenzini/cono36-retractil.webp';
 
 // Importaciones - Lorenzini Defensas y Postes
-import defensaCaminera from '../assets/lorenzini/defensa-caminera.png';
+import defensaCaminera from '../assets/lorenzini/defensa-caminera.webp';
 import pernosDefensas from '../assets/lorenzini/pernos-para-defensas.png';
 import posteCostanera from '../assets/lorenzini/poste-costanera.webp';
 import posteZebra from '../assets/lorenzini/poste-zebra.webp';
 import separadorDefensa from '../assets/lorenzini/separador-de-defensa.webp';
 import terminalMichigan from '../assets/lorenzini/terminal-michigan.webp';
 import terminalSimple from '../assets/lorenzini/terminal-simple-galvanizado.webp';
-import terminalSkt from '../assets/lorenzini/terminal-skt.png';
+import terminalSkt from '../assets/lorenzini/terminal-skt.webp';
 
 // Importaciones - Lorenzini Hitos
-import bolardoEsferaPu from '../assets/lorenzini/bolardo-esfera-pu.png';
-import hitoAbatibleDesmontableA from '../assets/lorenzini/hito-abatible-desmontable-A.png';
-import hitoAbatibleDesmontablePremium from '../assets/lorenzini/hito-abatible-desmontable-premium.png';
-import hitoAbatibleDesmontableB from '../assets/lorenzini/hito-abatible-desmontable-b.png';
-import hitoAbatibleLor from '../assets/lorenzini/hito-abatible-lor.png';
-import hitoAbatiblePremiumPu from '../assets/lorenzini/hito-abatible-premium-pu.png';
-import hitoAbatiblePu from '../assets/lorenzini/hito-abatible-pu.png';
-import hitoArista2 from '../assets/lorenzini/hito-arista.png';
-import hitoBaseParis from '../assets/lorenzini/hito-base-rellenable-paris.png';
-import hitoDesmontableA from '../assets/lorenzini/hito-abatible-desmontable-A.png';
-import hitoDesmontablePremium from '../assets/lorenzini/hito-abatible-desmontable-premium.png';
-import hitoDesmontableB from '../assets/lorenzini/hito-abatible-desmontable-b.png';
-import hitoFaena from '../assets/lorenzini/hito-faena.png';
-import hitoFlexiboll from '../assets/lorenzini/hito-flexiboll.png';
-import hitoFlexibleCiclovia from '../assets/lorenzini/hito-flexible-para-ciclovia.png';
-import hitoH75Lacroix from '../assets/lorenzini/hito-h75-locroix.png';
-import hitoH75LacroixAlias from '../assets/lorenzini/hito-h75-locroix.png';
-import hitoPaleta from '../assets/lorenzini/hito-paleta.png';
-import hitoPexco from '../assets/lorenzini/hito-pexco.png';
-import hitoRoma from '../assets/lorenzini/hito-roma.png';
-import hitoT120 from '../assets/lorenzini/hito-t120.png';
-import hitoT130 from '../assets/lorenzini/hito-t130.png';
-import hitoTubularAbatible from '../assets/lorenzini/hito-tubular-abatible.png';
-import hitoTubularEstatico from '../assets/lorenzini/hito-tubular-estatico.png';
-import hitoTubularFlexible from '../assets/lorenzini/hito-tubular-flexible.png';
-import panelSpringback from '../assets/lorenzini/panel-abatible-springback.png';
+import bolardoEsferaPu from '../assets/lorenzini/bolardo-esfera-pu.webp';
+import hitoAbatibleDesmontableA from '../assets/lorenzini/hito-abatible-desmontable-A.webp';
+import hitoAbatibleDesmontablePremium from '../assets/lorenzini/hito-abatible-desmontable-premium.webp';
+import hitoAbatibleDesmontableB from '../assets/lorenzini/hito-abatible-desmontable-b.webp';
+import hitoAbatibleLor from '../assets/lorenzini/hito-abatible-lor.webp';
+import hitoAbatiblePremiumPu from '../assets/lorenzini/hito-abatible-premium-pu.webp';
+import hitoAbatiblePu from '../assets/lorenzini/hito-abatible-pu.webp';
+import hitoArista2 from '../assets/lorenzini/hito-de-arista.webp';
+import hitoBaseParis from '../assets/lorenzini/hito-base-rellenable-paris.webp';
+import hitoDesmontableA from '../assets/lorenzini/hito-abatible-desmontable-A.webp';
+import hitoDesmontablePremium from '../assets/lorenzini/hito-abatible-desmontable-premium.webp';
+import hitoDesmontableB from '../assets/lorenzini/hito-abatible-desmontable-b.webp';
+import hitoFaena from '../assets/lorenzini/hito-de-faena.webp';
+import hitoFlexiboll from '../assets/lorenzini/hito-flexiboll.webp';
+import hitoFlexibleCiclovia from '../assets/lorenzini/hito-flexible-para-ciclovia.webp';
+import hitoH75Lacroix from '../assets/lorenzini/hito-h75-lacroix.webp';
+import hitoH75LacroixAlias from '../assets/lorenzini/hito-h75-lacroix.webp';
+import hitoPaleta from '../assets/lorenzini/hito-paleta.webp';
+import hitoPexco from '../assets/lorenzini/hito-pexco.webp';
+import hitoRoma from '../assets/lorenzini/hito-roma.webp';
+import hitoT120 from '../assets/lorenzini/hito-t120.webp';
+import hitoT130 from '../assets/lorenzini/hito-t130.webp';
+import hitoTubularAbatible from '../assets/lorenzini/hito-tubular-abatible.webp';
+import hitoTubularEstatico from '../assets/lorenzini/hito-tubular-estatico.webp';
+import hitoTubularFlexible from '../assets/lorenzini/hito-tubular-flexible.webp';
+import panelSpringback from '../assets/lorenzini/panel-abatible-springback.webp';
 
 // Importaciones - Lorenzini Iluminación Vial
 import kitBalizas from '../assets/lorenzini/kit-de-balizas-destellantes.webp';
@@ -194,21 +194,21 @@ import primerTermoplastico from '../assets/lorenzini/primer-termoplastico.webp';
 import solventeAcrilico from '../assets/lorenzini/solvente-acrilico.webp';
 
 // Importaciones - Lorenzini Tachas
-import tachaElectricaLed from '../assets/lorenzini/tacha-electrica-led.png';
-import tachaFotoluminiscenteRectangular from '../assets/lorenzini/tacha-fotoluminiscente-rectangular.png';
-import tachaFotoluminiscenteRedonda from '../assets/lorenzini/tacha-fotoluminiscente-redonda.png';
-import tachaNieveEuroasfalt from '../assets/lorenzini/tacha-para-nieve-euroasfalt.png';
+import tachaElectricaLed from '../assets/lorenzini/tacha-electrica-led.webp';
+import tachaFotoluminiscenteRectangular from '../assets/lorenzini/tacha-fotoluminiscente-rectangular.webp';
+import tachaFotoluminiscenteRedonda from '../assets/lorenzini/tacha-fotoluminiscente-redonda.webp';
+import tachaNieveEuroasfalt from '../assets/lorenzini/tacha-para-nieve-euroasfalt.webp';
 import tachaNieveS2Lp from '../assets/lorenzini/tacha-nieve-euroasfalt-s2lp.png';
-import tachaNieveS3Led from '../assets/lorenzini/tacha-para-nieve-euroasfalt-s3led.png';
+import tachaNieveS3Led from '../assets/lorenzini/tacha-para-nieve-euroasfalta-s3led.webp';
 import tachaNieveS4Kabel from '../assets/lorenzini/tacha-nieve-euroasfalt-s4kabel.png';
-import tachaNieveS4Max from '../assets/lorenzini/tacha-para-nieve-euroasfalt-s4max.png';
-import tachaPremiumP1090 from '../assets/lorenzini/tacha-premium-p1090.png';
-import tachaReflectivaPrismalux from '../assets/lorenzini/tacha-reflectiva-prismalux.png';
-import tachaReflectivaProvisoria from '../assets/lorenzini/tacha-reflectiva-provisoria.png';
-import tachaSolarVastago from '../assets/lorenzini/tacha-solar-con-o-sin-vastago.png';
-import tachaVallaPeatonal from '../assets/lorenzini/tacha-para-valla-peatonal.png';
-import tachonBidireccionalSinVastago from '../assets/lorenzini/tachon-bidireccional-sin-vastago.png';
-import tachonLedBidireccional from '../assets/lorenzini/tachon-led-bidireccional.png';
+import tachaNieveS4Max from '../assets/lorenzini/tacha-para-nieve-euroasfalt-s4max.webp';
+import tachaPremiumP1090 from '../assets/lorenzini/tacha-premium-p1090.webp';
+import tachaReflectivaPrismalux from '../assets/lorenzini/tacha-reflectiva-prismalux.webp';
+import tachaReflectivaProvisoria from '../assets/lorenzini/tacha-reflectiva-provisoria.webp';
+import tachaSolarVastago from '../assets/lorenzini/tacha-solar-con-o-sin-vastago.webp';
+import tachaVallaPeatonal from '../assets/lorenzini/tacha-para-valla-peatonal.webp';
+import tachonBidireccionalSinVastago from '../assets/lorenzini/tachon-bidireccional-sin-vastago.webp';
+import tachonLedBidireccional from '../assets/lorenzini/tachon-led-bidireccional.webp';
 
 // Importaciones - Pernos y anclaje
 import estaca from '../assets/productos/perno-asfalto-estaca-1-2x10-para-lomo-o-estacionamiento.webp';

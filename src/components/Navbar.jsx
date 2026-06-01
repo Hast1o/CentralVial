@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logoCentralVial from '../assets/Logo.png'; 
+import logoCentralVial from '../assets/Logo.png';
 import { SiWhatsapp } from '@icons-pack/react-simple-icons';
+import { ShoppingBag } from 'lucide-react';
 
 export default function Navbar() {
   // Estado para controlar el menú móvil
@@ -47,7 +48,23 @@ export default function Navbar() {
                 <Link to="/servicios" className="hover:text-cvial-primary transition-colors duration-300">Servicios</Link>
               </li>
               <li>
-                <Link to="/productos" className="hover:text-cvial-primary transition-colors duration-300">Productos</Link>
+                <style>{`
+                  @keyframes pulse-productos {
+                    0%, 100% {
+                      box-shadow: 0 0 15px rgba(34, 197, 94, 0.4);
+                    }
+                    50% {
+                      box-shadow: 0 0 25px rgba(34, 197, 94, 0.7);
+                    }
+                  }
+                  .btn-productos-nav {
+                    animation: pulse-productos 2s ease-in-out infinite;
+                  }
+                `}</style>
+                <Link to="/productos" className="btn-productos-nav flex items-center gap-2 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-4 py-2 rounded-full transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 transform hover:scale-105">
+                  <ShoppingBag size={18} />
+                  Productos
+                </Link>
               </li>
               <li>
                 <Link to="/contacto" className="hover:text-cvial-primary transition-colors duration-300">Contacto</Link>
@@ -110,7 +127,10 @@ export default function Navbar() {
               <Link to="/servicios" onClick={toggleMenu} className="block hover:text-cvial-primary transition-colors duration-300">Servicios</Link>
             </li>
             <li>
-              <Link to="/productos" onClick={toggleMenu} className="block hover:text-cvial-primary transition-colors duration-300">Productos</Link>
+              <Link to="/productos" className="flex items-center gap-2 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-4 py-2 rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105 font-bold" onClick={toggleMenu}>
+                <ShoppingBag size={18} />
+                Productos
+              </Link>
             </li>
             <li>
               <Link to="/contacto" onClick={toggleMenu} className="block hover:text-cvial-primary transition-colors duration-300">Contacto</Link>

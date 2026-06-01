@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, X } from 'lucide-react'; // <-- Se agregó el icono X
+import { ChevronLeft, ChevronRight, X, ShoppingBag, Sparkles } from 'lucide-react'; // <-- Se agregaron ShoppingBag y Sparkles
 
 // Importa aquí tus imágenes locales
 import imgaerodromo from '../assets/aerodromo.png';
@@ -172,7 +172,47 @@ export default function Inicio() {
         </div>
       </div>
 
-      {/* --- SECCIÓN 3: MODAL DE TRABAJO (Solo se renderiza si hay un cliente seleccionado) --- */}
+      {/* --- SECCIÓN 3: PROMOCIÓN DE PRODUCTOS --- */}
+      <style>{`
+        @keyframes pulse-glow {
+          0%, 100% {
+            box-shadow: 0 0 20px rgba(34, 197, 94, 0.5), 0 0 40px rgba(34, 197, 94, 0.3);
+          }
+          50% {
+            box-shadow: 0 0 30px rgba(34, 197, 94, 0.7), 0 0 60px rgba(34, 197, 94, 0.5);
+          }
+        }
+        .btn-productos {
+          animation: pulse-glow 2.5s ease-in-out infinite;
+        }
+      `}</style>
+      <div className="bg-gradient-to-r from-green-50 to-emerald-50 py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        {/* Decoración de fondo */}
+        <div className="absolute top-0 right-0 w-72 h-72 bg-green-200 rounded-full opacity-10 blur-3xl -z-10"></div>
+        <div className="absolute bottom-0 left-0 w-72 h-72 bg-emerald-200 rounded-full opacity-10 blur-3xl -z-10"></div>
+
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="flex justify-center mb-6">
+            <Sparkles size={40} className="text-green-600" />
+          </div>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-cvial-secondary mb-4">
+            Explora Nuestro Catálogo
+          </h2>
+          <div className="w-24 h-1 bg-green-600 mx-auto mb-6 rounded-full"></div>
+          <p className="text-lg text-gray-700 mb-10 max-w-2xl mx-auto leading-relaxed">
+            Contamos con una amplia gama de productos de seguridad vial, señalética, iluminación y mucho más. Descubre las soluciones que necesitas para tus proyectos.
+          </p>
+          <a
+            href="#/productos"
+            className="btn-productos inline-flex items-center justify-center gap-3 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold py-5 px-12 rounded-full transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-2 text-xl transform hover:scale-105"
+          >
+            <ShoppingBag size={28} />
+            Ver Productos
+          </a>
+        </div>
+      </div>
+
+      {/* --- SECCIÓN 4: MODAL DE TRABAJO (Solo se renderiza si hay un cliente seleccionado) --- */}
       {clienteSeleccionado && (
         <div 
           className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 backdrop-blur-sm p-4 transition-opacity duration-300"
