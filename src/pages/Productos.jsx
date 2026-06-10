@@ -90,7 +90,7 @@ import terminalPremium25x90_viz from '../assets/productos/terminal-lomo-de-toro-
 import kitEpoxico from '../assets/lorenzini/kit-pegamento-epoxico.webp';
 import pegamentoBituminoso from '../assets/lorenzini/pegamento-bituminoso.webp';
 import pegamentoPlastigum from '../assets/lorenzini/pegamento-plastigum.webp';
-import posteOmega from '../assets/lorenzini/poste-omega-galbanizado.webp';
+import posteOmega from '../assets/lorenzini/poste-omega-galbanizado.jpg';
 import señalesTransito from '../assets/lorenzini/señales-de-transito.png';
 
 // Importaciones - Lorenzini Balizas
@@ -418,7 +418,10 @@ const listaProductos = [
   { id: 404, codigo: "CV-404", nombre: "Pegamento Plastigum", categoria: "pegamento", descripcion: "Pegamento especializado para dispositivos plásticos viales, ofreciendo una excelente adherencia y flexibilidad ante cambios térmicos.", imagen: pegamentoPlastigum },
   { id: 405, codigo: "CV-405", nombre: "Pegamento Bituminoso", categoria: "pegamento", descripcion: "Adhesivo termoplástico a base de asfalto modificado, ideal para aplicaciones rápidas de tachas reflectantes en grandes extensiones.", imagen: pegamentoBituminoso },
   { id: 406, codigo: "CV-406", nombre: "Señales de Tránsito", categoria: "señales de transito", descripcion: "Fabricación de señales reglamentarias, preventivas e informativas con láminas reflectantes de alta intensidad según normativa vigente.", imagen: señalesTransito },
-  { id: 407, codigo: "CV-407", nombre: "Poste Omega Galvanizado", categoria: "señales de transito", descripcion: "Soporte de acero con perfil tipo Omega para señalización vertical, galvanizado para prevenir la corrosión en ambientes exteriores.", imagen: posteOmega },
+  { id: 408, codigo: "CV-408", nombre: "Poste Omega Galvanizado 1.5m - Espesor 2.5mm", categoria: "postes omegas", descripcion: "Soporte de acero con perfil tipo Omega de 1.5 metros, galvanizado para prevenir la corrosión en ambientes exteriores. Espesor 2.5mm.", imagen: posteOmega },
+  { id: 409, codigo: "CV-409", nombre: "Poste Omega Galvanizado 2m - Espesor 2.5mm", categoria: "postes omegas", descripcion: "Soporte de acero con perfil tipo Omega de 2 metros, galvanizado para prevenir la corrosión en ambientes exteriores. Espesor 2.5mm.", imagen: posteOmega },
+  { id: 410, codigo: "CV-410", nombre: "Poste Omega Galvanizado 3m - Espesor 2.5mm", categoria: "postes omegas", descripcion: "Soporte de acero con perfil tipo Omega de 3 metros, galvanizado para prevenir la corrosión en ambientes exteriores. Espesor 2.5mm.", imagen: posteOmega },
+  { id: 411, codigo: "CV-411", nombre: "Poste Omega Galvanizado 3.5m - Espesor 2.5mm", categoria: "postes omegas", descripcion: "Soporte de acero con perfil tipo Omega de 3.5 metros, galvanizado para prevenir la corrosión en ambientes exteriores. Espesor 2.5mm.", imagen: posteOmega },
 ];
 
 export default function Productos() {

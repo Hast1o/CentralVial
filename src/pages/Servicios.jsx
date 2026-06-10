@@ -1,25 +1,26 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Route, Wrench, Package, X, Image as ImageIcon } from 'lucide-react';
+import { ChevronDown, Route, Wrench, Package, X, Image as ImageIcon, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 
 // Imports de imágenes desde assets/servicios
-import imgTermoplastica from '../assets/servicios/pintura-termoplastica.jpg';
+import imgTermoplastica from '../assets/servicios/pintura-termoplastica.png';
 import imgSimbologia from '../assets/servicios/simbologia.png';
-import imgPinturaAirless from '../assets/servicios/pintura-airless.jpg';
-import imgDobleComponente from '../assets/servicios/doble-componente.png';
-import imgPaceCote from '../assets/servicios/pace-cote.jpg';
-import imgCanchas from '../assets/servicios/canchas.png';
+import imgPinturaAirless from '../assets/servicios/pintura-airless.png';
+import imgDobleComponente from '../assets/servicios/doble-componente.jpeg';
+import imgPaceCote from '../assets/servicios/pace-cote.png';
+import imgCanchas from '../assets/servicios/canchas.jpeg';
 
 // Imports para Instalación
 import imgSeñalesTransito from '../assets/servicios/señales-transito.png';
-import imgDefensasCamineras from '../assets/servicios/Defensas-camineras.jpg';
+import imgDefensasCamineras from '../assets/servicios/Defensas-camineras.png';
 import imgCercosAcmafor from '../assets/servicios/cercos-acmafor.png';
-import imgVallasPeatonales from '../assets/servicios/vallas-peatonales.png';
+import imgVallasPeatonales from '../assets/servicios/vallas-peatonales.jpeg';
 import imgTachasTachones from '../assets/servicios/tachas-tachones-hitos.png';
-import imgTopesEstacionamiento from '../assets/servicios/topes-estacionamiento.png';
+import imgTopesEstacionamiento from '../assets/servicios/topes-estacionamiento.jpeg';
 import imgReductoresVelocidad from '../assets/servicios/reductores-velocidad.png';
-import imgZebraSafe from '../assets/servicios/zebra-safe.jpg';
-import imgDelineadorVertical from '../assets/servicios/delineador-vertical.jpg';
+import imgZebraSafe from '../assets/servicios/zebra-safe.jpeg';
+import imgDelineadorVertical from '../assets/servicios/delineador-vertical.jpeg';
 import imgPostesOmega from '../assets/servicios/postes-omega.jpg';
 import imgLomoToro from '../assets/servicios/lomo-de-toro.png';
 
@@ -33,8 +34,8 @@ import imgTachones from '../assets/servicios/tachones.png';
 import imgInspeccion from '../assets/servicios/inspeccion.jpg';
 import imgBarrerasCamineras from '../assets/servicios/camineras.jpg';
 import imgPinturas from '../assets/servicios/pintura.jpg';
-import imgKitPegamento from '../assets/servicios/pegamento.jpg';
-import imgPostesOmegaAlt from '../assets/servicios/poste-ome.jpeg';
+import imgKitPegamento from '../assets/servicios/pegamento.png';
+import imgPostesOmegaAlt from '../assets/servicios/poste-ome.png';
 import imgCercosAcmaforAlt from '../assets/servicios/acmafor.webp';
 import imgPareSiga from '../assets/servicios/pare-siga.webp';
 
@@ -42,12 +43,12 @@ import imgPareSiga from '../assets/servicios/pare-siga.webp';
 
 // 2. ARREGLOS DE DATOS (Reemplaza las URL de 'imagen' por tus imports, ej: imagen: imgTermoplastica)
 const demarcacionesData = [
-  { id: 'd1', texto: "Pintura Termoplástica Blanca, Azul, Verde y amarilla con Sembrado de Microesferas.", imagen: imgTermoplastica },
-  { id: 'd2', texto: "Simbología en pintura termo plástico, pintura acrílica y plantillas.", imagen: imgSimbologia },
-  { id: 'd3', texto: "Pintura Acrílica Blanco, Azul, Amarillo, Verde y rojo con Sembrado de Microesferas, Tipo Airless.", imagen: imgPinturaAirless },
-  { id: 'd4', texto: "Pintura Doble Componente blanco Verde y Amarillo con Sembrado de Microesferas.", imagen: imgDobleComponente },
+  { id: 'd1', texto: "Pintura Termoplástica con Sembrado de Microesferas.", imagen: imgTermoplastica },
+  { id: 'd2', texto: "Simbología en pintura termo plástica.", imagen: imgSimbologia },
+  { id: 'd3', texto: "Pintura Acrílica con Sembrado de Microesferas.", imagen: imgPinturaAirless },
+  { id: 'd4', texto: "Pintura Doble Componente con Sembrado de Microesferas.", imagen: imgDobleComponente },
   { id: 'd5', texto: "Pintura Pace cote.", imagen: imgPaceCote },
-  { id: 'd6', texto: "Pintura Acrílica para Canchas de Tenis, Futbolito y Establecimientos Educacionales.", imagen: imgCanchas },
+  { id: 'd6', texto: "Pintura Acrílica para Canchas multiusos.", imagen: imgCanchas },
 ];
 
 const instalacionData = [
@@ -57,10 +58,10 @@ const instalacionData = [
   { id: 'i4', texto: "Vallas Peatonales.", imagen: imgVallasPeatonales },
   { id: 'i5', texto: "Tachas Reflectantes, Tachones e Hitos.", imagen: imgTachasTachones },
   { id: 'i6', texto: "Topes de Estacionamientos.", imagen: imgTopesEstacionamiento },
-  { id: 'i7', texto: "Reductores de velocidad (negro/amarillo).", imagen: imgReductoresVelocidad },
+  { id: 'i7', texto: "Reductores de velocidad.", imagen: imgReductoresVelocidad },
   { id: 'i8', texto: "Postes Zebra Zafe.", imagen: imgZebraSafe },
   { id: 'i9', texto: "Delineadores Verticales.", imagen: imgDelineadorVertical },
-  { id: 'i10', texto: "Postes Omega Galvanizado.", imagen: imgPostesOmega },
+  { id: 'i10', texto: "Postes Omega Galvanizado distintas medidas.", imagen: imgPostesOmegaAlt },
   { id: 'i11', texto: "Lomo de Toro.", imagen: imgLomoToro },
 ];
 
@@ -75,12 +76,14 @@ const materialesData = [
   { id: 'm8', texto: "Barreras camineras.", imagen: imgBarrerasCamineras },
   { id: 'm9', texto: "Pinturas (acrílica, alto tráfico, termo plástico, doble componente etc).", imagen: imgPinturas },
   { id: 'm10', texto: "Kit de pegamento.", imagen: imgKitPegamento },
-  { id: 'm11', texto: "Postes omega.", imagen: imgPostesOmegaAlt },
+  { id: 'm11', texto: "Postes omega.", imagen: imgPostesOmega },
   { id: 'm12', texto: "Cercos Acmafor.", imagen: imgCercosAcmaforAlt },
   { id: 'm13', texto: "Paletas de Señalización Pare/Siga.", imagen: imgPareSiga },
+  { id: 'm14', texto: "Para más suministros o materiales ve nuestro catálogo", enlace: true },
 ];
 
 export default function Servicios() {
+  const navigate = useNavigate();
   const [openPanels, setOpenPanels] = useState({
     demarcaciones: false,
     instalacion: false,
@@ -110,7 +113,11 @@ export default function Servicios() {
   // Función para manejar el clic en un ítem de la lista
   const handleItemClick = (e, item) => {
     e.stopPropagation(); // Evita que el clic cierre el panel acordeón
-    setItemSeleccionado(item);
+    if (item.enlace) {
+      navigate('/productos');
+    } else {
+      setItemSeleccionado(item);
+    }
   };
 
   return (
@@ -213,14 +220,18 @@ export default function Servicios() {
             <div className={`overflow-hidden transition-all duration-500 ${openPanels.materiales ? 'max-h-[1200px] opacity-100 mt-6' : 'max-h-0 opacity-0'}`}>
               <ul className="text-gray-600 space-y-2 pl-2 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2">
                 {materialesData.map((item) => (
-                  <li 
+                  <li
                     key={item.id}
                     onClick={(e) => handleItemClick(e, item)}
-                    className="flex items-start gap-3 p-2 rounded-lg hover:bg-gray-50 hover:text-cvial-primary transition-colors cursor-pointer group"
+                    className={`flex items-start gap-3 p-2 rounded-lg transition-colors cursor-pointer group ${item.enlace ? 'md:col-span-2 bg-cvial-primary/10 hover:bg-cvial-primary/20 text-cvial-primary font-semibold' : 'hover:bg-gray-50 hover:text-cvial-primary'}`}
                   >
-                    <div className="w-2 h-2 bg-cvial-primary rounded-full flex-shrink-0 mt-2 group-hover:scale-150 transition-transform"></div> 
+                    <div className={`w-2 h-2 rounded-full flex-shrink-0 mt-2 group-hover:scale-150 transition-transform ${item.enlace ? 'bg-cvial-primary' : 'bg-cvial-primary'}`}></div>
                     <span className="flex-1">{item.texto}</span>
-                    <ImageIcon className="text-gray-300 group-hover:text-cvial-primary opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 mt-0.5" size={18} />
+                    {item.enlace ? (
+                      <ArrowRight className="text-cvial-primary group-hover:translate-x-1 transition-transform flex-shrink-0 mt-0.5" size={18} />
+                    ) : (
+                      <ImageIcon className="text-gray-300 group-hover:text-cvial-primary opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 mt-0.5" size={18} />
+                    )}
                   </li>
                 ))}
               </ul>
