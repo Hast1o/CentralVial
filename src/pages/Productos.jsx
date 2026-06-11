@@ -192,6 +192,7 @@ import pinturaTermoplasticaMarcas from '../assets/lorenzini/pintura-termoplastic
 import primerPreformadoEpoxico from '../assets/lorenzini/primer-termoplastico-preformado-y-solvente-epoxico.webp';
 import primerTermoplastico from '../assets/lorenzini/primer-termoplastico.webp';
 import solventeAcrilico from '../assets/lorenzini/solvente-acrilico.webp';
+import pinturaAcrilicaTecnoquim from '../assets/productos/pintura-acrilica-tecnoquim.jpg';
 
 // Importaciones - Lorenzini Tachas
 import tachaElectricaLed from '../assets/lorenzini/tacha-electrica-led.webp';
@@ -344,6 +345,7 @@ const listaProductos = [
   { id: 330, codigo: "CV-330", nombre: "Solvente Acrílico", categoria: "pintura", descripcion: "Diluyente especializado para ajustar la viscosidad de pinturas acrílicas y realizar la limpieza de equipos de aplicación.", imagen: solventeAcrilico },
   { id: 331, codigo: "CV-331", nombre: "Primer Termoplástico", categoria: "pintura", descripcion: "Imprimante diseñado para mejorar la adherencia de la pintura termoplástica sobre superficies de concreto o asfalto envejecido.", imagen: primerTermoplastico },
   { id: 332, codigo: "CV-332", nombre: "Primer Termoplástico Preformado y Solvente Epóxico", categoria: "pintura", descripcion: "Sellador de base para aplicaciones preformadas y solvente reactivo para sistemas epóxicos de alta fijación.", imagen: primerPreformadoEpoxico },
+  { id: 347, codigo: "CV-347", nombre: "Pintura Acrílica Tecnoquim", categoria: "pintura", descripcion: "Pintura acrílica Tecnoquim para señalización y demarcación vial de alto desempeño.", imagen: pinturaAcrilicaTecnoquim },
   { id: 333, codigo: "CV-333", nombre: "Cono de Tráfico 12\"", categoria: "conos viales", descripcion: "Cono de 30 cm de altura fabricado en PVC de alta visibilidad, ideal para señalización en espacios reducidos o faenas menores.", imagen: cono12 },
   { id: 334, codigo: "CV-334", nombre: "Cono de Tráfico 18\"", categoria: "conos viales", descripcion: "Cono de 45 cm de altura, estándar para delimitación de áreas de trabajo y estacionamientos con excelente flexibilidad.", imagen: cono18 },
   { id: 335, codigo: "CV-335", nombre: "Cono de Tráfico 28\"", categoria: "conos viales", descripcion: "Cono de 70 cm de altura, tamaño reglamentario para uso en carreteras y vías urbanas de tráfico moderado.", imagen: cono28 },
